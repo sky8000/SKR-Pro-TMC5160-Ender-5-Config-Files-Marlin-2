@@ -2,6 +2,18 @@
 
 This repository contains Marlin custom config files for Creality Ender-5 printers with a BIGTREETECH SKR Pro v1.1 motherboard and TMC5169 drivers.   Settings used are also compatible with **Ender-3** and **Ender-3 Pro**, just be sure to use the correct config examples for your printer. For more information about which settings to change please browse to the config folder in this repository and read the readme.md files.
 
+Features:
+
+- Stock Ender-5/Ender-3/Ender-3 Pro LCD 12864 support.
+
+- BL Touch 3.x support (connected to dedicated on board port).
+
+- I2C EEPROM support.
+
+- TMC5160 with SPI communication for X, Y, Z and E0.
+
+  
+
 **Updated on 2019-10-29.**
 
 
