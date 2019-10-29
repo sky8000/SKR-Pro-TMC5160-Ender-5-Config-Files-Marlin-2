@@ -45,7 +45,7 @@
 #define X_MAX_PIN          PE15
 #define Y_MIN_PIN          PE12
 #define Y_MAX_PIN          PE10
-#define Z_MIN_PIN          PG8
+#define Z_MIN_PIN          PA2
 #define Z_MAX_PIN          PG5
 
 //
@@ -173,7 +173,7 @@
 #define HEATER_BED_PIN     PD12 // Hotbed
 #define FAN_PIN            PC8  // Fan0
 #define FAN1_PIN           PE5  // Fan1
-#define FAN2_PIN           PE6  // Fan2
+//#define FAN2_PIN           PE6  // Fan2
 
 //
 // Misc. Functions
@@ -207,7 +207,7 @@
     #define LCD_PINS_ENABLE PG7
     #define LCD_PINS_D4    PG3
 
-    // CR10_Stock Display needs a different delay setting on SKR PRO v1.1, so undef it here. 
+    // CR10_Stock Display needs a different delay setting on SKR PRO v1.1, so undef it here.
     // It will be defined again at the #HAS_GRAPHICAL_LCD section below.
     #undef ST7920_DELAY_1
     #undef ST7920_DELAY_2
@@ -274,3 +274,14 @@
   #endif
 
 #endif // HAS_SPI_LCD
+
+// 
+// EEPROM Configuration 
+// 
+
+#define I2C_EEPROM
+
+#ifdef E2END
+	#undef E2END
+	#define E2END 0x7FFF // EEPROM end address (32kB)
+#endif //
