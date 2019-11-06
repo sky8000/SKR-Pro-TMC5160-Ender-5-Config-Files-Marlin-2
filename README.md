@@ -14,7 +14,7 @@ Features:
 
   
 
-**Updated on 2019-10-29.**
+**Updated on 2019-11-06.**
 
 
 
@@ -24,9 +24,9 @@ Features:
 
 2. Copy files from folder **\Config_BLTouch31\Config_Files** in this repository to the folder **\Marlin** in your firmware root folder.
 
-3. Copy files from folder **\Config_BLTouch31\Compiler_Settings** in this repository to the your firmware root folder (also fixes compiling problem with TMCStepper library 5.2.0).
+3. Copy files from folder **\Config_BLTouch31\Compiler_Settings** in this repository to the your firmware root folder.
 
-4. Copy files from folder **\CR10_Display_Fix** in this repository to the folder **\Marlin\src\pins\stm32** in your firmware root folder (fixes LCD 12864 display corruption).
+4. Copy files from folder **\Config_BLTouch31\Pins_Files** in this repository to the folder **\Marlin\src\pins\stm32** in your firmware root folder.
 
 5. Compile the software and flash the board.
 
@@ -40,19 +40,24 @@ Features:
 
 1. Get the latest Marlin bugfix-2.0.x from the official site here: http://marlinfw.org/meta/download/.
 2. Copy files from folder **\Config_BLTouch31\Config_Files** in this repository to the folder **\Marlin** in your firmware root folder.
-3. Copy files from folder **\Config_BLTouch31\Compiler_Settings** in this repository to the your firmware root folder (also fixes compiling problem with TMCStepper library 5.2.0).
-4. Copy files from folder **\CR10_Display_Fix** in this repository to the folder **\Marlin\src\pins\stm32** in your firmware root folder (fixes LCD 12864 display corruption).
+3. Copy files from folder **\Config_BLTouch31\Compiler_Settings** in this repository to the your firmware root folder.
 5. Compile the software and flash the board.
-6. Optional (add I2C EEPROM support):** Edit **\Marlin\src\pins\stm32\pins_BIGTREE_SKR_PRO_V1.1.h** in your firmware root folder and append the text from file that matches your EEPROM size: **\I2C_EEPROM\I2C_4K_EEPROM.h** or **\I2C_EEPROM\I2C_32K_EEPROM.h**.
+6. **Optional (add I2C EEPROM support):** Edit **\Marlin\src\pins\stm32\pins_BIGTREE_SKR_PRO_V1.1.h** in your firmware root folder and append the text from file that matches your EEPROM size: **\I2C_EEPROM\I2C_4K_EEPROM.h** or **\I2C_EEPROM\I2C_32K_EEPROM.h**.
 7. **Optional (applies to users with I2C EEPROM installed):** Do a "Restore failsafe" from the printer's menu to make sure that the printer is running with the default values and avoid malfunction. 
 
 
 
 ## Connecting BL Touch to dedicated on-board header
 
-Below is a picture showing where to connect BL Touch to use the dedicated on-board header. Please note that
+Below is a picture showing where to connect BL Touch to use the dedicated on-board header. This not required but it leaves both Z end stops ports available if you want to repurpose it. In this case you also need to **follow** **step 3** from the **Installation guide for Printers with BL Touch 3.1**. 
 
-**Warning:** Before connecting BL Touch please make sure that it is configured in **open drain mode**. 
+Please note that the on-board header has only 4 pins and that the brown (or blue on some BL Touch kits from Creality) wire (Servo GND) from BL Touch cable **is not connected**.  Also make sure sure that BL Touch it is configured in **open drain mode**. 
+
+
+
+![](https://i.imgur.com/qnmc4Bd.jpg)
+
+
 
 
 
@@ -82,5 +87,5 @@ BIGTREETECH SKR Pro User Group on FB: https://www.facebook.com/groups/2264108593
 | Board                | BIGTREETECH SKR Pro v1.1                                     |
 | Display              | Stock Ender-5 display (LCD 12864)                            |
 | ABL                  | BL Touch 3.1                                                 |
-| Original file source | Ender-5 example config files bundled with Marlin bugfix-2.0.x tree, commit ac6abd9d5b, 2019-10-29 |
+| Original file source | Ender-5 example config files bundled with Marlin bugfix-2.0.x tree, commit 882609c5bd, 2019-11-06 |
 

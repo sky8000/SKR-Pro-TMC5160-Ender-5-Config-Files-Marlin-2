@@ -255,11 +255,6 @@
 
   #endif
 
-  // Fix CR10 display corruption
-  #undef ST7920_DELAY_1
-  #undef ST7920_DELAY_2
-  #undef ST7920_DELAY_3
-
   // Alter timing for graphical display
   #if HAS_GRAPHICAL_LCD
     #ifndef ST7920_DELAY_1
