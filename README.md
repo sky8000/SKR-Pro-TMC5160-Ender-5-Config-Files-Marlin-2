@@ -12,6 +12,8 @@ Features:
 
 - TMC5160 with SPI communication for X, Y, Z and E0.
 
+- Works with Octoprint.
+
   
 
 **Updated on 2019-11-06.**
@@ -76,6 +78,8 @@ Marlin bugfix-2.0.x: http://marlinfw.org/meta/download/
 Marlin Github repository: https://github.com/MarlinFirmware/Marlin
 
 BIGTREETECH SKR Pro User Group on FB: https://www.facebook.com/groups/2264108593625228/
+
+Octoprint download page: https://octoprint.org/download/
 
 
 
