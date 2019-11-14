@@ -12,7 +12,7 @@ Features:
 
 - TMC5160 with SPI communication for X, Y, Z and E0.
 
-- Automatically controlled extruder fan with auto-start at 50º C (connected to FAN0, pin PC8).
+- Automatically controlled extruder fan with auto-start at 50º C (connected to FAN2, pin PE6).
 
 - Works with Octoprint.
 
