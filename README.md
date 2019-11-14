@@ -12,11 +12,13 @@ Features:
 
 - TMC5160 with SPI communication for X, Y, Z and E0.
 
+- Automatically controlled extruder fan with auto-start at 50º C (connected to FAN0, pin PC8).
+
 - Works with Octoprint.
 
   
 
-**Updated on 2019-11-06.**
+**Updated on 2019-11-14.**
 
 
 
@@ -91,5 +93,5 @@ Octoprint download page: https://octoprint.org/download/
 | Board                | BIGTREETECH SKR Pro v1.1                                     |
 | Display              | Stock Ender-5 display (LCD 12864)                            |
 | ABL                  | BL Touch 3.1                                                 |
-| Original file source | Ender-5 example config files bundled with Marlin bugfix-2.0.x tree, commit 882609c5bd, 2019-11-06 |
+| Original file source | Ender-5 example config files bundled with Marlin bugfix-2.0.x tree, commit 2e684e1c4f, 2019-11-14 |
 
