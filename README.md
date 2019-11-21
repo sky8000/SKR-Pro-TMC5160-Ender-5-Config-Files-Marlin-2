@@ -18,7 +18,7 @@ Features:
 
   
 
-**Updated on 2019-11-14.**
+**Updated on 2019-11-21**
 
 
 
@@ -34,7 +34,7 @@ Features:
 
 5. Compile the software and flash the board.
 
-6. **Optional (add I2C EEPROM support):** Edit **\Marlin\src\pins\stm32\pins_BIGTREE_SKR_PRO_V1.1.h** in your firmware root folder and append the text from file that matches your EEPROM size: **\I2C_EEPROM\I2C_4K_EEPROM.h** or **\I2C_EEPROM\I2C_32K_EEPROM.h**.
+6. **Optional (add I2C EEPROM support):** Edit **\Marlin\src\pins\stm32\pins_BTT_SKR_PRO_V1_1.h** in your firmware root folder and append the text from file that matches your EEPROM size: **\I2C_EEPROM\I2C_4K_EEPROM.h** or **\I2C_EEPROM\I2C_32K_EEPROM.h**.
 
 7. **Optional (applies to users with I2C EEPROM installed):** Do a "Restore failsafe" from the printer's menu to make sure that the printer is running with the default values and avoid malfunction.
 
@@ -47,7 +47,7 @@ Features:
 3. Copy files from folder **\Config_Standard\Compiler_Settings** in this repository to the your firmware root folder.
 4. Copy files from folder **\Config_Standard\Pins_Files** in this repository to the folder **\Marlin\src\pins\stm32** in your firmware root folder.
 5. Compile the software and flash the board.
-6. **Optional (add I2C EEPROM support):** Edit **\Marlin\src\pins\stm32\pins_BIGTREE_SKR_PRO_V1.1.h** in your firmware root folder and append the text from file that matches your EEPROM size: **\I2C_EEPROM\I2C_4K_EEPROM.h** or **\I2C_EEPROM\I2C_32K_EEPROM.h**.
+6. **Optional (add I2C EEPROM support):** Edit **\Marlin\src\pins\stm32\pins_BTT_SKR_PRO_V1_1.h** in your firmware root folder and append the text from file that matches your EEPROM size: **\I2C_EEPROM\I2C_4K_EEPROM.h** or **\I2C_EEPROM\I2C_32K_EEPROM.h**.
 7. **Optional (applies to users with I2C EEPROM installed):** Do a "Restore failsafe" from the printer's menu to make sure that the printer is running with the default values and avoid malfunction. 
 
 
@@ -94,5 +94,5 @@ Octoprint download page: https://octoprint.org/download/
 | Board                | BIGTREETECH SKR Pro v1.1                                     |
 | Display              | Stock Ender-5 display (LCD 12864)                            |
 | ABL                  | BL Touch 3.1                                                 |
-| Original file source | Ender-5 example config files bundled with Marlin bugfix-2.0.x tree, commit a1c6d0bfe3, 2019-11-14 |
+| Original file source | Ender-5 example config files bundled with Marlin bugfix-2.0.x tree, commit 9dd598651a, 2019-11-21 |
 
