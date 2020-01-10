@@ -18,7 +18,7 @@ Features:
 
   
 
-**Updated on 2019-12-17**
+**Updated on 2020-01-10**
 
 
 
@@ -94,5 +94,5 @@ Octoprint download page: https://octoprint.org/download/
 | Board                | BIGTREETECH SKR Pro v1.1                                     |
 | Display              | Stock Ender-5 display (LCD 12864)                            |
 | ABL                  | BL Touch 3.1                                                 |
-| Original file source | Ender-5 example config files bundled with Marlin bugfix-2.0.x tree, commit 2434f0e8ef, 2019-12-17 |
+| Original file source | Ender-5 example config files bundled with Marlin bugfix-2.0.x tree, commit b8db1e16a9, 2020-01-10 |
 
