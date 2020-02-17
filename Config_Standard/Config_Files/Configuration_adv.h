@@ -819,7 +819,7 @@
   // probing on a screwhead or hollow washer, probe near the edges.
   //#define CALIBRATION_MEASURE_AT_TOP_EDGES
 
-  // Define pin which is read during calibration
+  // Define the pin to read during calibration
   #ifndef CALIBRATION_PIN
     #define CALIBRATION_PIN -1 // Override in pins.h or set to -1 to use your Z endstop
     #define CALIBRATION_PIN_INVERTING false // Set to true to invert the pin
@@ -1554,7 +1554,7 @@
 
   // Add additional compensation depending on hotend temperature
   // Note: this values cannot be calibrated and have to be set manually
-  #ifdef PROBE_TEMP_COMPENSATION
+  #if ENABLED(PROBE_TEMP_COMPENSATION)
     // Max temperature that can be reached by heated bed.
     // This is required only for the calibration process.
     #define PTC_MAX_BED_TEMP 110
@@ -1577,11 +1577,17 @@
 // @section extras
 
 //
+// G60/G61 Position Save and Return
+//
+//#define SAVED_POSITIONS 1         // Each saved position slot costs 12 bytes
+
+//
 // G2/G3 Arc Support
 //
 #define ARC_SUPPORT                 // Disable this feature to save ~3226 bytes
 #if ENABLED(ARC_SUPPORT)
   #define MM_PER_ARC_SEGMENT      1 // (mm) Length (or minimum length) of each arc segment
+  //#define ARC_SEGMENTS_PER_R    1 // Max segment length, MM_PER = Min
   #define MIN_ARC_SEGMENTS       24 // Minimum number of segments in a complete circle
   //#define ARC_SEGMENTS_PER_SEC 50 // Use feedrate to choose segment length (with MM_PER_ARC_SEGMENT as the minimum)
   #define N_ARC_CORRECTION       25 // Number of interpolated segments between corrections
@@ -1956,6 +1962,18 @@
     #define E5_MICROSTEPS       16
   #endif
 
+  #if AXIS_DRIVER_TYPE_E6(TMC26X)
+    #define E6_MAX_CURRENT    1000
+    #define E6_SENSE_RESISTOR   91
+    #define E6_MICROSTEPS       16
+  #endif
+
+  #if AXIS_DRIVER_TYPE_E7(TMC26X)
+    #define E7_MAX_CURRENT    1000
+    #define E7_SENSE_RESISTOR   91
+    #define E7_MICROSTEPS       16
+  #endif
+
 #endif // TMC26X
 
 // @section tmc_smart
@@ -1985,7 +2003,7 @@
     #define X_CURRENT       580        // (mA) RMS current. Multiply by 1.414 for peak current.
     #define X_CURRENT_HOME  X_CURRENT  // (mA) RMS current for sensorless homing
     #define X_MICROSTEPS     16    // 0..256
-    #define X_RSENSE          0.11
+    #define X_RSENSE          0.075
     #define X_CHAIN_POS      -1    // <=0 : Not chained. 1 : MCU MOSI connected. 2 : Next in chain, ...
   #endif
 
@@ -2001,7 +2019,7 @@
     #define Y_CURRENT       650
     #define Y_CURRENT_HOME  Y_CURRENT
     #define Y_MICROSTEPS     16
-    #define Y_RSENSE          0.11
+    #define Y_RSENSE          0.075
     #define Y_CHAIN_POS      -1
   #endif
 
@@ -2017,7 +2035,7 @@
     #define Z_CURRENT       580
     #define Z_CURRENT_HOME  Z_CURRENT
     #define Z_MICROSTEPS     16
-    #define Z_RSENSE          0.11
+    #define Z_RSENSE          0.075
     #define Z_CHAIN_POS      -1
   #endif
 
@@ -2048,7 +2066,7 @@
   #if AXIS_IS_TMC(E0)
     #define E0_CURRENT      650
     #define E0_MICROSTEPS    16
-    #define E0_RSENSE         0.11
+    #define E0_RSENSE         0.075
     #define E0_CHAIN_POS     -1
   #endif
 
