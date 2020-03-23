@@ -16,11 +16,11 @@ Features:
 
 - Works with Octoprint.
 
-- Compatible with Marlin 2.0.4.4.
+- Compatible with Marlin 2.0.5.1.
 
   
 
-**Updated on 2020-02-27**
+**Updated on 2020-03-23**
 
 
 
@@ -94,7 +94,7 @@ Octoprint download page: https://octoprint.org/download/
 
 | Item                 | Detail/description                                           |
 | -------------------- | ------------------------------------------------------------ |
-| Printer              | Creality Ender-5 (settings also compatible with Ender-3 and Ender-3 Pro using the correct config file examples from Marlin 2.0.4) |
+| Printer              | Creality Ender-5 (settings also compatible with Ender-3 and Ender-3 Pro using the correct config file examples from Marlin 2.0.5) |
 | Board                | BIGTREETECH SKR Pro v1.1                                     |
 | Display              | Stock Ender-5 display (LCD 12864)                            |
 | ABL                  | BL Touch 3.1                                                 |
