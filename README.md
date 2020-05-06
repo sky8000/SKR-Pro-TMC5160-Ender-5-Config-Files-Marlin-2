@@ -20,7 +20,7 @@ Features:
 
   
 
-**Updated on 2020-04-20.**
+**Updated on 2020-05-06.**
 
 
 
@@ -32,11 +32,11 @@ Features:
 
 3. Copy files from folder **\Config_BLTouch31\Compiler_Settings** in this repository to the your firmware root folder.
 
-4. Copy files from folder **\Config_BLTouch31\Pins_Files** in this repository to the folder **\Marlin\src\pins\stm32** in your firmware root folder.
+4. Copy files from folder **\Config_BLTouch31\Pins_Files** in this repository to the folder **\Marlin\src\pins\stm32f4** in your firmware root folder.
 
 5. Compile the software and flash the board.
 
-6. **Optional (add I2C EEPROM support):** Edit **\Marlin\src\pins\stm32\pins_BTT_SKR_PRO_V1_1.h** in your firmware root folder and append the text from file that matches your EEPROM size: **\I2C_EEPROM\I2C_4K_EEPROM.h** or **\I2C_EEPROM\I2C_32K_EEPROM.h**.
+6. **Optional (add I2C EEPROM support):** Edit **\Marlin\src\pins\stm32f4\pins_BTT_SKR_PRO_V1_1.h** in your firmware root folder and append the text from file that matches your EEPROM size: **\I2C_EEPROM\I2C_4K_EEPROM.h** or **\I2C_EEPROM\I2C_32K_EEPROM.h**.
 
 7. **Optional (applies to users with I2C EEPROM installed):** Do a "Restore failsafe" from the printer's menu to make sure that the printer is running with the default values and avoid malfunction.
 
@@ -47,9 +47,9 @@ Features:
 1. Get the latest Marlin bugfix-2.0.x from the official site here: http://marlinfw.org/meta/download/.
 2. Copy files from folder **\Config_Standard\Config_Files** in this repository to the folder **\Marlin** in your firmware root folder.
 3. Copy files from folder **\Config_Standard\Compiler_Settings** in this repository to the your firmware root folder.
-4. Copy files from folder **\Config_Standard\Pins_Files** in this repository to the folder **\Marlin\src\pins\stm32** in your firmware root folder.
+4. Copy files from folder **\Config_Standard\Pins_Files** in this repository to the folder **\Marlin\src\pins\stm32f4** in your firmware root folder.
 5. Compile the software and flash the board.
-6. **Optional (add I2C EEPROM support):** Edit **\Marlin\src\pins\stm32\pins_BTT_SKR_PRO_V1_1.h** in your firmware root folder and append the text from file that matches your EEPROM size: **\I2C_EEPROM\I2C_4K_EEPROM.h** or **\I2C_EEPROM\I2C_32K_EEPROM.h**.
+6. **Optional (add I2C EEPROM support):** Edit **\Marlin\src\pins\stm32f4\pins_BTT_SKR_PRO_V1_1.h** in your firmware root folder and append the text from file that matches your EEPROM size: **\I2C_EEPROM\I2C_4K_EEPROM.h** or **\I2C_EEPROM\I2C_32K_EEPROM.h**.
 7. **Optional (applies to users with I2C EEPROM installed):** Do a "Restore failsafe" from the printer's menu to make sure that the printer is running with the default values and avoid malfunction. 
 
 
