@@ -16,13 +16,12 @@ Features:
 
 - Works with Octoprint.
 
-- Compatible with Marlin 2.0.5.3.
-
-  
-
-**Updated on 2020-06-30.**
+- Compatible with Marlin 2.0.6.
 
 
+Please read section **Configuration changes for late 2019 Ender-5 printers** if you have an Ender-5 printer shipped from mid/end 2019.
+
+**Updated on 2020-08-06.**
 
 ## Installation guide for Printers with BL Touch 3.1
 
@@ -36,11 +35,21 @@ Features:
 
 5. Compile the software and flash the board.
 
-6. **Optional (add I2C EEPROM support):** Edit **\Marlin\src\pins\stm32f4\pins_BTT_SKR_PRO_V1_1.h** in your firmware root folder and append the text from file that matches your EEPROM size: **\I2C_EEPROM\I2C_4K_EEPROM.h** or **\I2C_EEPROM\I2C_32K_EEPROM.h**.
+6. **Optional (applies to Ender-5 printer with new Z leadscrew):** Follow the steps on section "Configuration changes for late 2019 Ender-5 printers" of this guide.
 
-7. **Optional (applies to users with I2C EEPROM installed):** Do a "Restore failsafe" from the printer's menu to make sure that the printer is running with the default values and avoid malfunction.
+7. **Optional (add I2C EEPROM support):** Edit **\Marlin\Configuration_adv.h** in your firmware root folder and append the text from file that matches your EEPROM size: **\I2C_EEPROM\I2C_4K_EEPROM.h** or **\I2C_EEPROM\I2C_32K_EEPROM.h**.
+
+8. **Optional (applies to users with I2C EEPROM installed):** Do a "Restore failsafe" from the printer's menu to make sure that the printer is running with the default values and avoid malfunction.
 
    
+
+## Configuration changes for late 2019 Ender-5 printers 
+
+In late 2019, Creality changed the Z leadscrew on Ender-5 matching the one shipped with the Ender-5 Pro to prevent the bed from dropping after power cuts. If your printer shipped with the new leadscrew you'll need to change `DEFAULT_AXIS_STEPS_PER_UNIT { 80, 80, 400, 93 }`  to  `DEFAULT_AXIS_STEPS_PER_UNIT { 80, 80, 800, 93 }` in  `Configuration.h`.
+
+If you are unsure which leadscrew you printer has but your prints are half as tall as they should be, then your printer should have the new version of the leadscrew and you need to change Z stepping configuration. 
+
+
 
 ## Installation guide for Printers without BL Touch
 
@@ -94,7 +103,7 @@ Octoprint download page: https://octoprint.org/download/
 
 | Item                 | Detail/description                                           |
 | -------------------- | ------------------------------------------------------------ |
-| Printer              | Creality Ender-5 (settings also compatible with Ender-3 and Ender-3 Pro using the correct config file examples from Marlin 2.0.5) |
+| Printer              | Creality Ender-5 (settings also compatible with Ender-3 and Ender-3 Pro using the correct config file examples from Marlin 2.0.6) |
 | Board                | BIGTREETECH SKR Pro v1.1                                     |
 | Display              | Stock Ender-5 display (LCD 12864)                            |
 | ABL                  | BL Touch 3.1                                                 |
